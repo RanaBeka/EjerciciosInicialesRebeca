@@ -6,10 +6,13 @@ public class Ejercicio4_3 : MonoBehaviour
 {
     [SerializeField] float cantidad;
     [SerializeField] string moneda;
+    [SerializeField] string euro;
+    [SerializeField] string dolar;
     // Start is called before the first frame update
     void Start()
     {
-        
+        float resultado = Convertir(5f, "euro");
+        Debug.Log(resultado);
     }
 
     // Update is called once per frame
@@ -17,8 +20,18 @@ public class Ejercicio4_3 : MonoBehaviour
     {
         
     }
-    void Convertir(float cantidad, string moneda)
+    float Convertir(float cantidad, string moneda)
     {
-
+        float resultado = 0;
+        if (moneda == "euro")
+        {
+            resultado = cantidad * 1.11f;
+        }
+        else if ( moneda == "dolar")
+        { 
+            resultado = cantidad * 0.90f;
+        }
+        return resultado;
     }
 }
+
