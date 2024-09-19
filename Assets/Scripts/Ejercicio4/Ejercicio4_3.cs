@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class Ejercicio4_3 : MonoBehaviour
 {
-    [SerializeField] float cantidad;
-    [SerializeField] string moneda;
-    [SerializeField] string euro;
-    [SerializeField] string dolar;
+    
+    
     // Start is called before the first frame update
     void Start()
     {
